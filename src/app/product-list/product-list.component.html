@@ -1,18 +1,18 @@
 <h2>Products</h2>
 <!--test push: solution -> reload StackBliz again by shutting down the old window -->
-<div *ngFor="let product of products">
+<div *ngFor="let product of products; index as productId">
   <h3>
-    <a [title]="product.name+' details'">
-    {{product.name}}
+    <a [title]="product.name+' details'" [routerLink]="['/products', productId]">
+      {{product.name}}
     </a>
-    </h3>
-    <p *ngIf="product.description">
-      Description: {{product.description}}
-    </p>
-    <div>
-      <button id="share" (click)="share()">Share</button>
-      <app-product-alerts id="notifyMe" [product]="product" (notify)="onNotify()"></app-product-alerts>
-    </div>  
+  </h3>
+  <p *ngIf="product.description">
+    Description: {{product.description}}
+  </p>
+  <div>
+    <button id="share" (click)="share()">Share</button>
+    <app-product-alerts id="notifyMe" [product]="product" (notify)="onNotify()"></app-product-alerts>
+  </div>  
 </div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
