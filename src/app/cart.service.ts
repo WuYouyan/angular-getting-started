@@ -19,6 +19,11 @@ export class CartService {
     return this.items;
   }
 
+  // removeItem(item){
+  //   // this.items.splice(this.items.findIndex(item),1);
+  //   this.items.filter(product=>product.name==item.name);
+  // }
+
   constructor() { }
 
 }
