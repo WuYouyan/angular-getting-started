@@ -6,8 +6,10 @@
 </p>
 
 <div *ngFor = "let item of items" class = "cart-item" >
-  <span>{{item.name}}</span>
-  <span>{{item.price | currency}}</span>
+  <span class="item_name">{{item.name}}</span>
+  <span *ngIf="item.number>1" class="item_number">X {{item.number}}</span>
+  <!-- <span>x2</span> -->
+  <span class="item_price">{{item.price | currency}}</span>
   <!-- <button (click)=remove(item) [routerLink]="['/cart']">Remove</button> -->
 </div>
 
