@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';//HttpClient service is provided by the HttpClientModule, which is already defined in the AppModule
 
 @Injectable({
   providedIn: 'root'
